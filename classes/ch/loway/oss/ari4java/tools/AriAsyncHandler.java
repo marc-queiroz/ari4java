@@ -20,6 +20,7 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
 
     public AriAsyncHandler(AriCallback<? super T> callback, TypeReference<T> klazzType) {
         this.callback = callback;
+        this.klazzType = klazzType;
     }
 
     public AriCallback<? super T> getCallback() {
@@ -27,6 +28,7 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
     }
 
     void handleResponse(String json) {
+        System.out.println("Trying to handle response");
         try {
             T result;
             if (Void.class.equals(klazz)) {
@@ -34,6 +36,7 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
             } else if (klazz != null) {
                 result = BaseAriAction.deserializeJson(json, klazz);
             } else {
+                System.out.println("Value of klazzType: " + klazzType);
                 result = BaseAriAction.deserializeJson(json, klazzType);
             }
             this.callback.onSuccess(result);

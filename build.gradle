@@ -1,11 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'findbugs'
 apply plugin: 'maven'
+apply plugin: 'eclipse'
 def env = System.getenv()
 
 //
 // I defaults valgono per HUDSON
 //
+
+group = "ch.loway.oss.ari4java"
+version = "0.3.1"
 
 project.ext {
   webapp_name    = 'ari4java'

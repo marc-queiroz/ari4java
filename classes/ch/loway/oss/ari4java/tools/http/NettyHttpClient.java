@@ -186,7 +186,7 @@ public class NettyHttpClient implements HttpClient, WsClient {
 
                         @Override
                         public void operationComplete(ChannelFuture future) throws Exception {
-                            responseHandler.onDisconnect();
+                            //responseHandler.onDisconnect();
                             if (future.isSuccess()) {
                                 NettyHttpClientHandler handler = (NettyHttpClientHandler) future.channel().pipeline().get("http-handler");
                                 if (HttpResponseStatus.OK.equals(handler.getResponseStatus()) || HttpResponseStatus.NO_CONTENT.equals(handler.getResponseStatus())) {
