@@ -28,7 +28,6 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
     }
 
     void handleResponse(String json) {
-        System.out.println("Trying to handle response");
         try {
             T result;
             if (Void.class.equals(klazz)) {
