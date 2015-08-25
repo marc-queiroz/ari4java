@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -22,26 +22,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface StoredRecording {
 
-// String getFormat
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getFormat();
-
-
-
-// void setName String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setName(String val );
-
-
-
 // String getName
 /**********************************************************
  * 
@@ -52,6 +32,16 @@ public interface StoredRecording {
 
 
 
+// String getFormat
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public String getFormat();
+
+
+
 // void setFormat String
 /**********************************************************
  * 
@@ -59,6 +49,16 @@ public interface StoredRecording {
  * @since ari_0_0_1
  *********************************************************/
  public void setFormat(String val );
+
+
+
+// void setName String
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(String val );
 
 
 }

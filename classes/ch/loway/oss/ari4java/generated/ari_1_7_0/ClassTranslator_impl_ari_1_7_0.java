@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.ARI;
@@ -139,6 +139,10 @@ public class ClassTranslator_impl_ari_1_7_0 implements ARI.ClassFactory {
 	   return (ChannelHangupRequest_impl_ari_1_7_0.class);
 	} else 
 
+	if ( interfaceClass.equals(ChannelHold.class) ) {
+	   return (ChannelHold_impl_ari_1_7_0.class);
+	} else 
+
 	if ( interfaceClass.equals(ChannelLeftBridge.class) ) {
 	   return (ChannelLeftBridge_impl_ari_1_7_0.class);
 	} else 
@@ -153,6 +157,10 @@ public class ClassTranslator_impl_ari_1_7_0 implements ARI.ClassFactory {
 
 	if ( interfaceClass.equals(ChannelTalkingStarted.class) ) {
 	   return (ChannelTalkingStarted_impl_ari_1_7_0.class);
+	} else 
+
+	if ( interfaceClass.equals(ChannelUnhold.class) ) {
+	   return (ChannelUnhold_impl_ari_1_7_0.class);
 	} else 
 
 	if ( interfaceClass.equals(ChannelUserevent.class) ) {

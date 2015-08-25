@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -47,6 +47,8 @@ import java.util.Map;
 , @Type(value = ChannelUserevent_impl_ari_1_7_0.class, name = "ChannelUserevent")
 , @Type(value = ChannelHangupRequest_impl_ari_1_7_0.class, name = "ChannelHangupRequest")
 , @Type(value = ChannelVarset_impl_ari_1_7_0.class, name = "ChannelVarset")
+, @Type(value = ChannelHold_impl_ari_1_7_0.class, name = "ChannelHold")
+, @Type(value = ChannelUnhold_impl_ari_1_7_0.class, name = "ChannelUnhold")
 , @Type(value = ChannelTalkingStarted_impl_ari_1_7_0.class, name = "ChannelTalkingStarted")
 , @Type(value = ChannelTalkingFinished_impl_ari_1_7_0.class, name = "ChannelTalkingFinished")
 , @Type(value = EndpointStateChange_impl_ari_1_7_0.class, name = "EndpointStateChange")

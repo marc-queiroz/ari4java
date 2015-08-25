@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -32,16 +32,6 @@ public interface TextMessageVariable {
 
 
 
-// String getKey
-/**********************************************************
- * A unique key identifying the variable.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getKey();
-
-
-
 // void setKey String
 /**********************************************************
  * A unique key identifying the variable.
@@ -49,6 +39,16 @@ public interface TextMessageVariable {
  * @since ari_1_5_0
  *********************************************************/
  public void setKey(String val );
+
+
+
+// String getKey
+/**********************************************************
+ * A unique key identifying the variable.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public String getKey();
 
 
 

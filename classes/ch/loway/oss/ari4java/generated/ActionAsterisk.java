@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -42,6 +42,17 @@ public void getGlobalVar(String variable, AriCallback<Variable> callback);
 
 
 
+// AsteriskInfo getInfo String
+/**********************************************************
+ * Gets Asterisk system information.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public AsteriskInfo getInfo(String only) throws RestException;
+
+
+
 // void setGlobalVar String String AriCallback<Void> callback
 /**********************************************************
  * 
@@ -71,17 +82,6 @@ public Variable getGlobalVar(String variable) throws RestException;
  * @since ari_0_0_1
  *********************************************************/
 public void setGlobalVar(String variable, String value) throws RestException;
-
-
-
-// AsteriskInfo getInfo String
-/**********************************************************
- * Gets Asterisk system information.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public AsteriskInfo getInfo(String only) throws RestException;
 
 
 }

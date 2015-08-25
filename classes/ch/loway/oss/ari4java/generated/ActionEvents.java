@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -22,24 +22,13 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionEvents {
 
-// void userEvent String String String Map<String,String>
+// void userEvent String String String Map<String,String> AriCallback<Void> callback
 /**********************************************************
- * Generate a user event.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void userEvent(String eventName, String application, String source, Map<String,String> variables) throws RestException;
-
-
-
-// void eventWebsocket String AriCallback<Message> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void eventWebsocket(String app, AriCallback<Message> callback);
+public void userEvent(String eventName, String application, String source, Map<String,String> variables, AriCallback<Void> callback);
 
 
 
@@ -54,13 +43,24 @@ public Message eventWebsocket(String app) throws RestException;
 
 
 
-// void userEvent String String String Map<String,String> AriCallback<Void> callback
+// void eventWebsocket String AriCallback<Message> callback
 /**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void eventWebsocket(String app, AriCallback<Message> callback);
+
+
+
+// void userEvent String String String Map<String,String>
+/**********************************************************
+ * Generate a user event.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void userEvent(String eventName, String application, String source, Map<String,String> variables, AriCallback<Void> callback);
+public void userEvent(String eventName, String application, String source, Map<String,String> variables) throws RestException;
 
 
 }

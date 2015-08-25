@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -22,16 +22,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelDialplan {
 
-// String getDialplan_app
-/**********************************************************
- * The application about to be executed.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getDialplan_app();
-
-
-
 // Channel getChannel
 /**********************************************************
  * The channel that changed dialplan location.
@@ -39,16 +29,6 @@ public interface ChannelDialplan {
  * @since ari_0_0_1
  *********************************************************/
  public Channel getChannel();
-
-
-
-// void setDialplan_app String
-/**********************************************************
- * The application about to be executed.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setDialplan_app(String val );
 
 
 
@@ -62,6 +42,26 @@ public interface ChannelDialplan {
 
 
 
+// void setChannel Channel
+/**********************************************************
+ * The channel that changed dialplan location.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(Channel val );
+
+
+
+// void setDialplan_app String
+/**********************************************************
+ * The application about to be executed.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDialplan_app(String val );
+
+
+
 // void setDialplan_app_data String
 /**********************************************************
  * The data to be passed to the application.
@@ -72,13 +72,13 @@ public interface ChannelDialplan {
 
 
 
-// void setChannel Channel
+// String getDialplan_app
 /**********************************************************
- * The channel that changed dialplan location.
+ * The application about to be executed.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel(Channel val );
+ public String getDialplan_app();
 
 
 }

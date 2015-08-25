@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.ARI;
@@ -39,10 +39,12 @@ public interface AriBuilder {
     public abstract ChannelDtmfReceived channelDtmfReceived();
     public abstract ChannelEnteredBridge channelEnteredBridge();
     public abstract ChannelHangupRequest channelHangupRequest();
+    public abstract ChannelHold channelHold();
     public abstract ChannelLeftBridge channelLeftBridge();
     public abstract ChannelStateChange channelStateChange();
     public abstract ChannelTalkingFinished channelTalkingFinished();
     public abstract ChannelTalkingStarted channelTalkingStarted();
+    public abstract ChannelUnhold channelUnhold();
     public abstract ChannelUserevent channelUserevent();
     public abstract ChannelVarset channelVarset();
     public abstract ConfigInfo configInfo();

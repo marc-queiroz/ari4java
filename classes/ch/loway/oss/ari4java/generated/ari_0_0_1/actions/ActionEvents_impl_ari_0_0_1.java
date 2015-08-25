@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -51,21 +51,21 @@ httpActionAsync(callback, Message_impl_ari_0_0_1.class);
 }
 
 /**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void userEvent(String eventName, String application, String source, Map<String,String> variables, AriCallback<Void> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
  * Generate a user event.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
 public void userEvent(String eventName, String application, String source, Map<String,String> variables) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void userEvent(String eventName, String application, String source, Map<String,String> variables, AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

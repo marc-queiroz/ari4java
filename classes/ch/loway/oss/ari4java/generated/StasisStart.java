@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -21,16 +21,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface StasisStart {
-
-// void setReplace_channel Channel
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setReplace_channel(Channel val );
-
-
 
 // Channel getReplace_channel
 /**********************************************************
@@ -62,6 +52,16 @@ public interface StasisStart {
 
 
 
+// void setChannel Channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(Channel val );
+
+
+
 // List<String> getArgs
 /**********************************************************
  * Arguments to the application
@@ -72,13 +72,13 @@ public interface StasisStart {
 
 
 
-// void setChannel Channel
+// void setReplace_channel Channel
 /**********************************************************
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_1_5_0
  *********************************************************/
- public void setChannel(Channel val );
+ public void setReplace_channel(Channel val );
 
 
 }

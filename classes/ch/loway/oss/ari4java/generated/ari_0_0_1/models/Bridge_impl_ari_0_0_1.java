@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Fri Mar 20 17:43:44 CET 2015
+//    Generated on: Tue Aug 25 09:57:19 BRT 2015
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -79,24 +79,6 @@ private static final long serialVersionUID = 1L;
  }
 
 /**********************************************************
- * Entity that created the bridge
- * 
- * @since ari_1_0_0
- *********************************************************/
- public String getCreator(){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Name the creator gave the bridge
- * 
- * @since ari_1_0_0
- *********************************************************/
- public void setName(String val ){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
  * Name the creator gave the bridge
  * 
  * @since ari_1_0_0
@@ -110,7 +92,25 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_0_0
  *********************************************************/
+ public String getCreator(){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Entity that created the bridge
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
  public void setCreator(String val ){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Name the creator gave the bridge
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public void setName(String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
