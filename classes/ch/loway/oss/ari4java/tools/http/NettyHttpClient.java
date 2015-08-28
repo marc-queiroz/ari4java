@@ -1,48 +1,39 @@
 package ch.loway.oss.ari4java.tools.http;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+
+import ch.loway.oss.ari4java.tools.HttpClient;
+import ch.loway.oss.ari4java.tools.HttpParam;
+import ch.loway.oss.ari4java.tools.HttpResponse;
+import ch.loway.oss.ari4java.tools.HttpResponseHandler;
+import ch.loway.oss.ari4java.tools.RestException;
+import ch.loway.oss.ari4java.tools.WsClient;
+
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
-import io.netty.channel.ChannelPromise;
 import io.netty.channel.EventLoopGroup;
-import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.DefaultHttpRequest;
-import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpClientCodec;
-import io.netty.handler.codec.http.HttpHeaders;
+import io.netty.handler.codec.http.HttpHeaderNames;
+import io.netty.handler.codec.http.HttpHeaderValues;
 import io.netty.handler.codec.http.HttpMethod;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequest;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.websocketx.CloseWebSocketFrame;
-import io.netty.handler.codec.http.websocketx.PongWebSocketFrame;
-import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
 import io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory;
-import io.netty.handler.codec.http.websocketx.WebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketVersion;
-import io.netty.util.CharsetUtil;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.Charset;
-import java.util.List;
-
-import ch.loway.oss.ari4java.tools.HttpParam;
-import ch.loway.oss.ari4java.tools.HttpResponse;
-import ch.loway.oss.ari4java.tools.HttpClient;
-import ch.loway.oss.ari4java.tools.HttpResponseHandler;
-import ch.loway.oss.ari4java.tools.RestException;
-import ch.loway.oss.ari4java.tools.WsClient;
 
 /**
  * HTTP and WebSocket client implementation based on netty.io.
@@ -125,8 +116,8 @@ public class NettyHttpClient implements HttpClient, WsClient {
         DefaultHttpRequest request = new DefaultHttpRequest(
                 HttpVersion.HTTP_1_1, HttpMethod.valueOf(method), "/ari" + path + queryString);
         //System.out.println(request.getUri());
-        request.headers().set(HttpHeaders.Names.HOST, "localhost");
-        request.headers().set(HttpHeaders.Names.CONNECTION, HttpHeaders.Values.CLOSE);
+        request.headers().set(HttpHeaderNames.HOST, "localhost");
+        request.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE);
         return request;
     }
 

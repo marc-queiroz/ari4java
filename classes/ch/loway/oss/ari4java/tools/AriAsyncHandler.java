@@ -29,13 +29,14 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
 
     void handleResponse(String json) {
         try {
+            //System.out.println(String.format("json: %s",json)); 
             T result;
             if (Void.class.equals(klazz)) {
                 result = null;
             } else if (klazz != null) {
                 result = BaseAriAction.deserializeJson(json, klazz);
             } else {
-                System.out.println("Value of klazzType: " + klazzType);
+                //System.out.println("Value of klazzType: " + klazzType);
                 result = BaseAriAction.deserializeJson(json, klazzType);
             }
             this.callback.onSuccess(result);

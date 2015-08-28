@@ -143,7 +143,7 @@ public class BaseAriAction {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            System.out.println(String.format("json: %s\n, klazzType: %s", json, klazzType));
+            //System.out.println(String.format("json: %s\n, klazzType: %s", json, klazzType));
             return mapper.readValue(json, klazzType);
         } catch (IOException e) {
             throw new RestException("Decoding JSON list: " + e.toString());

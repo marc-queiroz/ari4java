@@ -8,8 +8,8 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import java.nio.charset.Charset;
 
 /**
- * HttpClientHandler handles the asynchronous response from the remote
- * HTTP server.
+ * HttpClientHandler handles the asynchronous response from the remote HTTP
+ * server.
  *
  * @author mwalton
  *
@@ -17,39 +17,38 @@ import java.nio.charset.Charset;
 
 @ChannelHandler.Sharable
 public class NettyHttpClientHandler extends SimpleChannelInboundHandler<Object> {
-    protected String responseText;
-    protected HttpResponseStatus responseStatus;
+  protected String responseText;
+  protected HttpResponseStatus responseStatus;
 
-    public void reset() {
-        responseText = null;
-        responseStatus = null;
+  @Override
+  protected void messageReceived(ChannelHandlerContext ctx, Object msg) throws Exception {
+    // Channel ch = ctx.channel();
+    if (msg instanceof FullHttpResponse) {
+      FullHttpResponse response = (FullHttpResponse) msg;
+      responseText = response.content().toString(Charset.defaultCharset());
+      responseStatus = response.status();
+    } else {
+      // TODO: what?
     }
+  }
 
-    @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        //Channel ch = ctx.channel();
-        if (msg instanceof FullHttpResponse) {
-            FullHttpResponse response = (FullHttpResponse) msg;
-            responseText = response.content().toString(Charset.defaultCharset());
-            responseStatus = response.getStatus();
-        } else {
-            // TODO: what?
-        }
-    }
+  public void reset() {
+    responseText = null;
+    responseStatus = null;
+  }
 
-    public String getResponseText() {
-        return responseText;
-    }
+  public String getResponseText() {
+    return responseText;
+  }
 
-    public HttpResponseStatus getResponseStatus() {
-        return responseStatus;
-    }
+  public HttpResponseStatus getResponseStatus() {
+    return responseStatus;
+  }
 
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        cause.printStackTrace();
-        ctx.close();
-    }
+  @Override
+  public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    cause.printStackTrace();
+    ctx.close();
+  }
 
 }
-

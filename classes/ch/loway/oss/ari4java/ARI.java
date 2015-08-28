@@ -51,11 +51,25 @@ public class ARI {
     private ActionEvents liveActionEvent = null;
     private AriSubscriber subscriptions = new AriSubscriber();
 
-    public void setHttpClient(HttpClient httpClient) {
+  /**
+   * @return the httpClient
+   */
+  public HttpClient getHttpClient() {
+    return httpClient;
+  }
+
+  public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
 
-    public void setWsClient(WsClient wsClient) {
+  /**
+  * @return the wsClient
+  */
+  public WsClient getWsClient() {
+    return wsClient;
+  }
+
+  public void setWsClient(WsClient wsClient) {
         this.wsClient = wsClient;
     }
 

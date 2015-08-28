@@ -53,7 +53,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
+    protected void messageReceived(ChannelHandlerContext ctx, Object msg) throws Exception {
         Channel ch = ctx.channel();
         
         if (!handshaker.isHandshakeComplete()) {
@@ -65,7 +65,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         
         if (msg instanceof FullHttpResponse) {
             FullHttpResponse response = (FullHttpResponse) msg;
-            throw new Exception("Unexpected FullHttpResponse (getStatus=" + response.getStatus() + ", content=" + response.content().toString(CharsetUtil.UTF_8) + ')');
+            throw new Exception("Unexpected FullHttpResponse (status=" + response.status() + ", content=" + response.content().toString(CharsetUtil.UTF_8) + ')');
         }
         
         WebSocketFrame frame = (WebSocketFrame) msg;
@@ -76,7 +76,10 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         } else if (frame instanceof PongWebSocketFrame) {
             System.out.println("WebSocket Client received pong");
         } else if (frame instanceof CloseWebSocketFrame) {
+            CloseWebSocketFrame closeWebSocketFrame = (CloseWebSocketFrame) frame;
             System.out.println("WebSocket Client received closing");
+            System.out.println("Frame Content: " + closeWebSocketFrame.content().toString());
+            wsCallback.onDisconnect();
             ch.close();
         }
         
