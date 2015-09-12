@@ -36,10 +36,6 @@ sourceSets {
 	}
 }
 
-//artifacts {
-//    archives sourcesJar
-//    archives javadocJar
-//}
 
 task writeNewPom << {
     pom {
@@ -83,6 +79,10 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveName project.ext.webapp_name + "-" + project.ext.app_version + "-javadoc.jar"
 }
 
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
 
 
 jar {
